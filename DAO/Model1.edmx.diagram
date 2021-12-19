@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0afee72b7381470a8a76c41f3c2297eb" Name="Diagram1" ZoomLevel="121">
+        <EntityTypeShape EntityType="db_osModel.tb_cliente" Width="1.5" PointX="3" PointY="13.125" />
+        <EntityTypeShape EntityType="db_osModel.tb_fornecedor" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="db_osModel.tb_funcionario" Width="1.5" PointX="3" PointY="8.875" />
+        <EntityTypeShape EntityType="db_osModel.tb_item_os" Width="1.5" PointX="10.5" PointY="10" />
+        <EntityTypeShape EntityType="db_osModel.tb_item_venda" Width="1.5" PointX="7.5" PointY="7.125" />
+        <EntityTypeShape EntityType="db_osModel.tb_os" Width="1.5" PointX="8.25" PointY="10.25" />
+        <EntityTypeShape EntityType="db_osModel.tb_produto" Width="1.5" PointX="5.25" PointY="6.75" />
+        <EntityTypeShape EntityType="db_osModel.tb_usuario" Width="1.5" PointX="0.75" PointY="9.25" />
+        <EntityTypeShape EntityType="db_osModel.tb_venda" Width="1.5" PointX="5.25" PointY="12" />
+        <AssociationConnector Association="db_osModel.fk_tb_cliente_td_usuario" />
+        <AssociationConnector Association="db_osModel.fk_tb_os_tb_cliente1" />
+        <AssociationConnector Association="db_osModel.fk_tb_venda_tb_cliente1" />
+        <AssociationConnector Association="db_osModel.fk_tb_fornecedor_td_usuario1" />
+        <AssociationConnector Association="db_osModel.fk_tb_produto_tb_fornecedor1" />
+        <AssociationConnector Association="db_osModel.fk_tb_funcionario_td_usuario1" />
+        <AssociationConnector Association="db_osModel.fk_tb_os_tb_funcionario1" />
+        <AssociationConnector Association="db_osModel.fk_tb_venda_tb_funcionario1" />
+        <AssociationConnector Association="db_osModel.fk_tb_item_os_tb_os1" />
+        <AssociationConnector Association="db_osModel.fk_tb_item_os_tb_produto1" />
+        <AssociationConnector Association="db_osModel.fk_tb_item_venda_tb_produto1" />
+        <AssociationConnector Association="db_osModel.fk_tb_item_venda_tb_venda1" />
+        <AssociationConnector Association="db_osModel.fk_tb_os_td_usuario1" />
+        <AssociationConnector Association="db_osModel.fk_tb_produto_td_usuario1" />
+        <AssociationConnector Association="db_osModel.fk_tb_venda_td_usuario1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

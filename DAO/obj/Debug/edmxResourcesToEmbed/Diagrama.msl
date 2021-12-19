@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_osModelStoreContainer" CdmEntityContainer="banco">
+    <EntitySetMapping Name="tb_cliente">
+      <EntityTypeMapping TypeName="db_osModel.tb_cliente">
+        <MappingFragment StoreEntitySet="tb_cliente">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="email_cliente" ColumnName="email_cliente" />
+          <ScalarProperty Name="cpf_cliente" ColumnName="cpf_cliente" />
+          <ScalarProperty Name="celular_cliente" ColumnName="celular_cliente" />
+          <ScalarProperty Name="telefone_cliente" ColumnName="telefone_cliente" />
+          <ScalarProperty Name="cidade_cliente" ColumnName="cidade_cliente" />
+          <ScalarProperty Name="bairro_cliente" ColumnName="bairro_cliente" />
+          <ScalarProperty Name="endereco_cliente" ColumnName="endereco_cliente" />
+          <ScalarProperty Name="nome_cliente" ColumnName="nome_cliente" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_fornecedor">
+      <EntityTypeMapping TypeName="db_osModel.tb_fornecedor">
+        <MappingFragment StoreEntitySet="tb_fornecedor">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="email_fornecedor" ColumnName="email_fornecedor" />
+          <ScalarProperty Name="cpfcnpj_fornecedor" ColumnName="cpfcnpj_fornecedor" />
+          <ScalarProperty Name="celular_fornecedor" ColumnName="celular_fornecedor" />
+          <ScalarProperty Name="telefone_fornecedor" ColumnName="telefone_fornecedor" />
+          <ScalarProperty Name="cidade_fornecedor" ColumnName="cidade_fornecedor" />
+          <ScalarProperty Name="bairro_fornecedor" ColumnName="bairro_fornecedor" />
+          <ScalarProperty Name="endereco_fornecedor" ColumnName="endereco_fornecedor" />
+          <ScalarProperty Name="nome_fornecedor" ColumnName="nome_fornecedor" />
+          <ScalarProperty Name="id_fornecedor" ColumnName="id_fornecedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_funcionario">
+      <EntityTypeMapping TypeName="db_osModel.tb_funcionario">
+        <MappingFragment StoreEntitySet="tb_funcionario">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="situacao_funcionario" ColumnName="situacao_funcionario" />
+          <ScalarProperty Name="data_ad_funcionario" ColumnName="data_ad_funcionario" />
+          <ScalarProperty Name="cpf_funcionario" ColumnName="cpf_funcionario" />
+          <ScalarProperty Name="celular_funcionario" ColumnName="celular_funcionario" />
+          <ScalarProperty Name="cidade_funcionario" ColumnName="cidade_funcionario" />
+          <ScalarProperty Name="bairro_funcionario" ColumnName="bairro_funcionario" />
+          <ScalarProperty Name="endereco_funcionario" ColumnName="endereco_funcionario" />
+          <ScalarProperty Name="nome_funcionario" ColumnName="nome_funcionario" />
+          <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_item_venda">
+      <EntityTypeMapping TypeName="db_osModel.tb_item_venda">
+        <MappingFragment StoreEntitySet="tb_item_venda">
+          <ScalarProperty Name="id_produto" ColumnName="id_produto" />
+          <ScalarProperty Name="qtd_item_venda" ColumnName="qtd_item_venda" />
+          <ScalarProperty Name="id_item_venda" ColumnName="id_item_venda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_os">
+      <EntityTypeMapping TypeName="db_osModel.tb_os">
+        <MappingFragment StoreEntitySet="tb_os">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="id_os_produto" ColumnName="id_os_produto" />
+          <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="servico_executado_os" ColumnName="servico_executado_os" />
+          <ScalarProperty Name="defeito_constatado_os" ColumnName="defeito_constatado_os" />
+          <ScalarProperty Name="preco_servico_os" ColumnName="preco_servico_os" />
+          <ScalarProperty Name="data_saida_os" ColumnName="data_saida_os" />
+          <ScalarProperty Name="observacoes_os" ColumnName="observacoes_os" />
+          <ScalarProperty Name="defeito_relatado_os" ColumnName="defeito_relatado_os" />
+          <ScalarProperty Name="senha_os" ColumnName="senha_os" />
+          <ScalarProperty Name="modelo_os" ColumnName="modelo_os" />
+          <ScalarProperty Name="marca_os" ColumnName="marca_os" />
+          <ScalarProperty Name="equipamento_os" ColumnName="equipamento_os" />
+          <ScalarProperty Name="retorno_os" ColumnName="retorno_os" />
+          <ScalarProperty Name="data_entrada_os" ColumnName="data_entrada_os" />
+          <ScalarProperty Name="id_os" ColumnName="id_os" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_os_produto">
+      <EntityTypeMapping TypeName="db_osModel.tb_os_produto">
+        <MappingFragment StoreEntitySet="tb_os_produto">
+          <ScalarProperty Name="id_produto" ColumnName="id_produto" />
+          <ScalarProperty Name="qtd_os_produto" ColumnName="qtd_os_produto" />
+          <ScalarProperty Name="id_os_produto" ColumnName="id_os_produto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_produto">
+      <EntityTypeMapping TypeName="db_osModel.tb_produto">
+        <MappingFragment StoreEntitySet="tb_produto">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="id_fornecedor" ColumnName="id_fornecedor" />
+          <ScalarProperty Name="venda_produto" ColumnName="venda_produto" />
+          <ScalarProperty Name="custo_produto" ColumnName="custo_produto" />
+          <ScalarProperty Name="estoque_produto" ColumnName="estoque_produto" />
+          <ScalarProperty Name="categoria_produto" ColumnName="categoria_produto" />
+          <ScalarProperty Name="marca_produto" ColumnName="marca_produto" />
+          <ScalarProperty Name="nome_produto" ColumnName="nome_produto" />
+          <ScalarProperty Name="id_produto" ColumnName="id_produto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_usuario">
+      <EntityTypeMapping TypeName="db_osModel.tb_usuario">
+        <MappingFragment StoreEntitySet="tb_usuario">
+          <ScalarProperty Name="situacao_usuario" ColumnName="situacao_usuario" />
+          <ScalarProperty Name="senha_usuario" ColumnName="senha_usuario" />
+          <ScalarProperty Name="nome_usuario" ColumnName="nome_usuario" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_venda">
+      <EntityTypeMapping TypeName="db_osModel.tb_venda">
+        <MappingFragment StoreEntitySet="tb_venda">
+          <ScalarProperty Name="id_item_venda" ColumnName="id_item_venda" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
+          <ScalarProperty Name="acrescimo_venda" ColumnName="acrescimo_venda" />
+          <ScalarProperty Name="desconto_venda" ColumnName="desconto_venda" />
+          <ScalarProperty Name="vencimento_venda" ColumnName="vencimento_venda" />
+          <ScalarProperty Name="parcelamento_venda" ColumnName="parcelamento_venda" />
+          <ScalarProperty Name="operacao_venda" ColumnName="operacao_venda" />
+          <ScalarProperty Name="id_venda" ColumnName="id_venda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

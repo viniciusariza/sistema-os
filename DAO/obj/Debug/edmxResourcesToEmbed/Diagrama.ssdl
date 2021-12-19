@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_osModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tb_cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome_cliente" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="endereco_cliente" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="bairro_cliente" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="cidade_cliente" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="telefone_cliente" Type="varchar" MaxLength="10" />
+    <Property Name="celular_cliente" Type="varchar" MaxLength="11" />
+    <Property Name="cpf_cliente" Type="varchar" MaxLength="14" />
+    <Property Name="email_cliente" Type="varchar" MaxLength="150" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_fornecedor">
+    <Key>
+      <PropertyRef Name="id_fornecedor" />
+    </Key>
+    <Property Name="id_fornecedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome_fornecedor" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="endereco_fornecedor" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="bairro_fornecedor" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="cidade_fornecedor" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="telefone_fornecedor" Type="varchar" MaxLength="10" />
+    <Property Name="celular_fornecedor" Type="varchar" MaxLength="11" />
+    <Property Name="cpfcnpj_fornecedor" Type="varchar" MaxLength="14" />
+    <Property Name="email_fornecedor" Type="varchar" MaxLength="150" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_funcionario">
+    <Key>
+      <PropertyRef Name="id_funcionario" />
+    </Key>
+    <Property Name="id_funcionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome_funcionario" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="endereco_funcionario" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="bairro_funcionario" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="cidade_funcionario" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="celular_funcionario" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="cpf_funcionario" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="data_ad_funcionario" Type="date" />
+    <Property Name="situacao_funcionario" Type="bool" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_item_venda">
+    <Key>
+      <PropertyRef Name="id_item_venda" />
+    </Key>
+    <Property Name="id_item_venda" Type="uint" Nullable="false" />
+    <Property Name="qtd_item_venda" Type="int" Nullable="false" />
+    <Property Name="id_produto" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_os">
+    <Key>
+      <PropertyRef Name="id_os" />
+    </Key>
+    <Property Name="id_os" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data_entrada_os" Type="date" Nullable="false" />
+    <Property Name="retorno_os" Type="bool" />
+    <Property Name="equipamento_os" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="marca_os" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="modelo_os" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="senha_os" Type="varchar" MaxLength="60" />
+    <Property Name="defeito_relatado_os" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="observacoes_os" Type="varchar" MaxLength="250" />
+    <Property Name="data_saida_os" Type="date" />
+    <Property Name="preco_servico_os" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="defeito_constatado_os" Type="varchar" MaxLength="250" />
+    <Property Name="servico_executado_os" Type="varchar" MaxLength="250" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="id_funcionario" Type="int" />
+    <Property Name="id_os_produto" Type="int" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_os_produto">
+    <Key>
+      <PropertyRef Name="id_os_produto" />
+    </Key>
+    <Property Name="id_os_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qtd_os_produto" Type="int" Nullable="false" />
+    <Property Name="id_produto" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_produto">
+    <Key>
+      <PropertyRef Name="id_produto" />
+    </Key>
+    <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome_produto" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="marca_produto" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="categoria_produto" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="estoque_produto" Type="int" Nullable="false" />
+    <Property Name="custo_produto" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="venda_produto" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="id_fornecedor" Type="int" Nullable="false" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_usuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome_usuario" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="senha_usuario" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="situacao_usuario" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_venda">
+    <Key>
+      <PropertyRef Name="id_venda" />
+    </Key>
+    <Property Name="id_venda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="operacao_venda" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="parcelamento_venda" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="vencimento_venda" Type="date" Nullable="false" />
+    <Property Name="desconto_venda" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="acrescimo_venda" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="id_funcionario" Type="int" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="id_item_venda" Type="uint" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_tb_cliente_td_usuario">
+    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="1" />
+    <End Role="tb_cliente" Type="Self.tb_cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="tb_cliente">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_fornecedor_td_usuario1">
+    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="1" />
+    <End Role="tb_fornecedor" Type="Self.tb_fornecedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="tb_fornecedor">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_funcionario_td_usuario1">
+    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="1" />
+    <End Role="tb_funcionario" Type="Self.tb_funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="tb_funcionario">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_item_venda_tb_produto1">
+    <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="1" />
+    <End Role="tb_item_venda" Type="Self.tb_item_venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_produto">
+        <PropertyRef Name="id_produto" />
+      </Principal>
+      <Dependent Role="tb_item_venda">
+        <PropertyRef Name="id_produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_os_produto_tb_produto1">
+    <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="1" />
+    <End Role="tb_os_produto" Type="Self.tb_os_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_produto">
+        <PropertyRef Name="id_produto" />
+      </Principal>
+      <Dependent Role="tb_os_produto">
+        <PropertyRef Name="id_produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_os_tb_cliente1">
+    <End Role="tb_cliente" Type="Self.tb_cliente" Multiplicity="1" />
+    <End Role="tb_os" Type="Self.tb_os" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="tb_os">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_os_tb_funcionario1">
+    <End Role="tb_funcionario" Type="Self.tb_funcionario" Multiplicity="0..1" />
+    <End Role="tb_os" Type="Self.tb_os" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_funcionario">
+        <PropertyRef Name="id_funcionario" />
+      </Principal>
+      <Dependent Role="tb_os">
+        <PropertyRef Name="id_funcionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_os_tb_os_produto1">
+    <End Role="tb_os_produto" Type="Self.tb_os_produto" Multiplicity="0..1" />
+    <End Role="tb_os" Type="Self.tb_os" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_os_produto">
+        <PropertyRef Name="id_os_produto" />
+      </Principal>
+      <Dependent Role="tb_os">
+        <PropertyRef Name="id_os_produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_os_td_usuario1">
+    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="1" />
+    <End Role="tb_os" Type="Self.tb_os" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="tb_os">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_produto_tb_fornecedor1">
+    <End Role="tb_fornecedor" Type="Self.tb_fornecedor" Multiplicity="1" />
+    <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_fornecedor">
+        <PropertyRef Name="id_fornecedor" />
+      </Principal>
+      <Dependent Role="tb_produto">
+        <PropertyRef Name="id_fornecedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_produto_td_usuario1">
+    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="1" />
+    <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="tb_produto">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_venda_tb_cliente1">
+    <End Role="tb_cliente" Type="Self.tb_cliente" Multiplicity="1" />
+    <End Role="tb_venda" Type="Self.tb_venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="tb_venda">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_venda_tb_funcionario1">
+    <End Role="tb_funcionario" Type="Self.tb_funcionario" Multiplicity="1" />
+    <End Role="tb_venda" Type="Self.tb_venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_funcionario">
+        <PropertyRef Name="id_funcionario" />
+      </Principal>
+      <Dependent Role="tb_venda">
+        <PropertyRef Name="id_funcionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_venda_tb_item_venda1">
+    <End Role="tb_item_venda" Type="Self.tb_item_venda" Multiplicity="1" />
+    <End Role="tb_venda" Type="Self.tb_venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_item_venda">
+        <PropertyRef Name="id_item_venda" />
+      </Principal>
+      <Dependent Role="tb_venda">
+        <PropertyRef Name="id_item_venda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_venda_td_usuario1">
+    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="1" />
+    <End Role="tb_venda" Type="Self.tb_venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="tb_venda">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_osModelStoreContainer">
+    <EntitySet Name="tb_cliente" EntityType="Self.tb_cliente" Schema="db_os" store:Type="Tables" />
+    <EntitySet Name="tb_fornecedor" EntityType="Self.tb_fornecedor" Schema="db_os" store:Type="Tables" />
+    <EntitySet Name="tb_funcionario" EntityType="Self.tb_funcionario" Schema="db_os" store:Type="Tables" />
+    <EntitySet Name="tb_item_venda" EntityType="Self.tb_item_venda" Schema="db_os" store:Type="Tables" />
+    <EntitySet Name="tb_os" EntityType="Self.tb_os" Schema="db_os" store:Type="Tables" />
+    <EntitySet Name="tb_os_produto" EntityType="Self.tb_os_produto" Schema="db_os" store:Type="Tables" />
+    <EntitySet Name="tb_produto" EntityType="Self.tb_produto" Schema="db_os" store:Type="Tables" />
+    <EntitySet Name="tb_usuario" EntityType="Self.tb_usuario" Schema="db_os" store:Type="Tables" />
+    <EntitySet Name="tb_venda" EntityType="Self.tb_venda" Schema="db_os" store:Type="Tables" />
+    <AssociationSet Name="fk_tb_cliente_td_usuario" Association="Self.fk_tb_cliente_td_usuario">
+      <End Role="tb_usuario" EntitySet="tb_usuario" />
+      <End Role="tb_cliente" EntitySet="tb_cliente" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_fornecedor_td_usuario1" Association="Self.fk_tb_fornecedor_td_usuario1">
+      <End Role="tb_usuario" EntitySet="tb_usuario" />
+      <End Role="tb_fornecedor" EntitySet="tb_fornecedor" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_funcionario_td_usuario1" Association="Self.fk_tb_funcionario_td_usuario1">
+      <End Role="tb_usuario" EntitySet="tb_usuario" />
+      <End Role="tb_funcionario" EntitySet="tb_funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_item_venda_tb_produto1" Association="Self.fk_tb_item_venda_tb_produto1">
+      <End Role="tb_produto" EntitySet="tb_produto" />
+      <End Role="tb_item_venda" EntitySet="tb_item_venda" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_os_produto_tb_produto1" Association="Self.fk_tb_os_produto_tb_produto1">
+      <End Role="tb_produto" EntitySet="tb_produto" />
+      <End Role="tb_os_produto" EntitySet="tb_os_produto" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_os_tb_cliente1" Association="Self.fk_tb_os_tb_cliente1">
+      <End Role="tb_cliente" EntitySet="tb_cliente" />
+      <End Role="tb_os" EntitySet="tb_os" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_os_tb_funcionario1" Association="Self.fk_tb_os_tb_funcionario1">
+      <End Role="tb_funcionario" EntitySet="tb_funcionario" />
+      <End Role="tb_os" EntitySet="tb_os" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_os_tb_os_produto1" Association="Self.fk_tb_os_tb_os_produto1">
+      <End Role="tb_os_produto" EntitySet="tb_os_produto" />
+      <End Role="tb_os" EntitySet="tb_os" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_os_td_usuario1" Association="Self.fk_tb_os_td_usuario1">
+      <End Role="tb_usuario" EntitySet="tb_usuario" />
+      <End Role="tb_os" EntitySet="tb_os" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_produto_tb_fornecedor1" Association="Self.fk_tb_produto_tb_fornecedor1">
+      <End Role="tb_fornecedor" EntitySet="tb_fornecedor" />
+      <End Role="tb_produto" EntitySet="tb_produto" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_produto_td_usuario1" Association="Self.fk_tb_produto_td_usuario1">
+      <End Role="tb_usuario" EntitySet="tb_usuario" />
+      <End Role="tb_produto" EntitySet="tb_produto" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_venda_tb_cliente1" Association="Self.fk_tb_venda_tb_cliente1">
+      <End Role="tb_cliente" EntitySet="tb_cliente" />
+      <End Role="tb_venda" EntitySet="tb_venda" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_venda_tb_funcionario1" Association="Self.fk_tb_venda_tb_funcionario1">
+      <End Role="tb_funcionario" EntitySet="tb_funcionario" />
+      <End Role="tb_venda" EntitySet="tb_venda" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_venda_tb_item_venda1" Association="Self.fk_tb_venda_tb_item_venda1">
+      <End Role="tb_item_venda" EntitySet="tb_item_venda" />
+      <End Role="tb_venda" EntitySet="tb_venda" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_venda_td_usuario1" Association="Self.fk_tb_venda_td_usuario1">
+      <End Role="tb_usuario" EntitySet="tb_usuario" />
+      <End Role="tb_venda" EntitySet="tb_venda" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

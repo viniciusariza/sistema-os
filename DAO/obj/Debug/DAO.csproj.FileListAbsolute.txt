@@ -1,0 +1,10 @@
+C:\csharp\os\DAO\bin\Debug\DAO.dll.config
+C:\csharp\os\DAO\bin\Debug\DAO.dll
+C:\csharp\os\DAO\bin\Debug\DAO.pdb
+C:\csharp\os\DAO\bin\Debug\EntityFramework.dll
+C:\csharp\os\DAO\bin\Debug\EntityFramework.xml
+C:\csharp\os\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\csharp\os\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\csharp\os\DAO\obj\Debug\DAO.dll
+C:\csharp\os\DAO\obj\Debug\DAO.pdb
+C:\csharp\os\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
